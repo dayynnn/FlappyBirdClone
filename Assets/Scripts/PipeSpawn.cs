@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PipeSpawn : MonoBehaviour
 {
-    [SerializeField] private float heightRange = 0.85f;
-    [SerializeField] private float totalTime = 5f;
+    [SerializeField] private float heightRange = 0.99f;
+    [SerializeField] private float totalTime = 2f;
     [SerializeField] private GameObject pipes;
     private float timer;
 
@@ -31,6 +31,6 @@ public class PipeSpawn : MonoBehaviour
         Vector2 spawnPoint = (Vector2)transform.position + new Vector2(0, Random.Range(-heightRange, heightRange));
         GameObject pipe = Instantiate(pipes, spawnPoint, Quaternion.identity);
 
-        Destroy(pipe, 8f);
+        Destroy(pipe, 10f);
     }
 }

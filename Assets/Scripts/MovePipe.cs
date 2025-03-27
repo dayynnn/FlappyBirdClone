@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovePipe : MonoBehaviour
 {
-    [SerializeField] private float speed = 1f;
+    [SerializeField] private float speed = 0.8f;
 
     void Update()
     {

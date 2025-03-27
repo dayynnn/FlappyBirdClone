@@ -5,7 +5,7 @@ using UnityEngine;
 public class GroundSpawn : MonoBehaviour
 {
     [SerializeField] GameObject _ground;
-    [SerializeField] private float groundTimer = 5f;
+    [SerializeField] private float maxTime = 5f;
     
     private float timer;
 
@@ -18,7 +18,7 @@ public class GroundSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > groundTimer)
+        if (timer > maxTime)
         {
             SpawnGround();
             timer = 0;
@@ -30,6 +30,6 @@ public class GroundSpawn : MonoBehaviour
         Vector2 spawnPoint = (Vector2)transform.position /*+ new Vector2(5,0)*/;
         GameObject ground = Instantiate(_ground, spawnPoint, Quaternion.identity);
 
-        Destroy(ground, 5f);
+        Destroy(ground, 10f);
     }
 }
